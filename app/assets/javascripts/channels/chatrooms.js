@@ -1,6 +1,5 @@
 //= require cable
-//= require_self
-//= require tree .
+//= require_tree .
 
 this.App = {}
 this.cable = ActionCable.createConsumer();
