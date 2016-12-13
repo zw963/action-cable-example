@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#about'
 
-  resources :chatrooms, only: [:index, :show, :new]
+  resources :chatrooms
   resources :messages
   resources :registrations, only: [:new, :create]
 
