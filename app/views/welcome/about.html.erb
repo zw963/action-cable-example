@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h1>欢迎来到聊天室.</h1>
+  <p>Rails 5 聊天例子</p>
+  <%if current_user%>
+  <p><span class="glyphicon glyphicon-heart"></span> Nice to see you, <%= current_user.username%> <span class="glyphicon glyphicon-heart"></span></p>
+  <%end%>
+  <p>请首先登录, 谢谢!</p>
+</div>
