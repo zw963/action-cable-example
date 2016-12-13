@@ -1,2 +1,21 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+
+    <h2 id="log-in-title">Log in</h2>
+    <div class="auth-form well">
+      <%= form_for(@user, url: sessions_path) do |f| %>
+
+      <%=f.label :username%>
+      <div class="input-group">
+        <span class="input-group-addon">@</span>
+        <%= f.text_field :username, class: "form-control"%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "log in", class: "btn btn-primary" %>
+      </div>
+      <% end %>
+    </div>
+    <%= render partial: 'layouts/flash_errors'%>
+  </div>
+</div>
