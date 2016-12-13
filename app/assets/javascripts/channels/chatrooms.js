@@ -2,4 +2,4 @@
 //= require_tree .
 
 this.App = {}
-this.cable = ActionCable.createConsumer();
+App.cable = ActionCable.createConsumer();
