@@ -1,3 +1,5 @@
+set :deploy_to, -> { "/data_1/www/#{fetch(application)}/#{fetch(:application)}-staging" }
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

@@ -1,14 +1,28 @@
+set :application, 'action-cable-example'
+
+# 设置要部署的 root 目录, Default: -> { "/var/www/#{fetch(:application)}" }
+# 这个应该环境中指定.
+# set :deploy_to, -> { "/data_1/www/action-cable-example/#{fetch(:application)}" }
+
+set :scm, :git
+set :branch, :master
+# 本地 git 示例: ssh://git@example.com:30000/~/me/my_repo.git
+# svn 示例: svn://myhost/myrepo/#{fetch(:branch)}
+set :repo_url, 'git@github.com:zw963/action-cable-example.git'
+set :keep_releases, 5
+
 # config valid only for current version of Capistrano
-lock "3.7.0"
+lock '3.7.0'
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+local_user, -> { Etc.getlogin }
 
-# Default branch is :master
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+
+# Default branch is :master
+
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -27,7 +41,6 @@ set :repo_url, "git@example.com:me/my_repo.git"
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
