@@ -1,10 +1,8 @@
 # role 示例: role :web, %w{hello@world.com example.com:1234}
 
-role :web, %w{ershou_web@www.ershou_web.test.xthinkapp.com}
-role :app, %w{ershou_web@www.ershou_web.test.xthinkapp.com}
-role :db,  %w{ershou_web@www.ershou_web.test.xthinkapp.com}
-
-set :deploy_to, -> { "/var/www/#{fetch(application)}/#{fetch(:application)}-staging" }
+role :web, %w{action-cable-example@www.ershou_web.test.xthinkapp.com}
+role :app, %w{action-cable-example@www.ershou_web.test.xthinkapp.com}
+role :db,  %w{action-cable-example@www.ershou_web.test.xthinkapp.com}
 
 # server-based syntax
 # ======================
