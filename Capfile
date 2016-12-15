@@ -1,13 +1,14 @@
 require 'capistrano/setup'      # Load DSL and set up stages
 require 'capistrano/deploy'     # Include default deployment tasks
+
+# capistrano/rails 包含以下三部分.
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 
 require 'capistrano/scm/git'
 install_plugin Capistrano::SCM::Git
-
-require "capistrano/rvm"
+require 'capistrano/rvm'
 
 # Include tasks from other gems included in your Gemfile
 #

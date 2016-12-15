@@ -19,6 +19,9 @@ set :linked_files, %w{
 set :linked_files, %w{
   log
   tmp
+  vendor/bundle
+  public/system
+  public/uploads
 }
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
