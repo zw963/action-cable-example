@@ -7,6 +7,8 @@ set :branch, -> { `git rev-parse --abbrev-ref HEAD`.chomp }
 # svn 示例: svn://myhost/myrepo/#{fetch(:branch)}
 set :repo_url, 'git@github.com:zw963/action-cable-example.git'
 set :keep_releases, 5
+set :tmp_dir, "#{fetch(:deploy_to)}/tmp"
+
 
 set :local_user, -> { Etc.getlogin }
 
