@@ -12,8 +12,6 @@ set :local_user, -> { Etc.getlogin }
 set :rails_env, -> { fetch(:stage) }
 
 set :linked_files, %w{
-  config/database.yml
-  config/secrets.yml
 }
 set :linked_dirs, %w{
   log
