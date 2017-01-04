@@ -1,0 +1,2 @@
+class JsonImport < ApplicationRecord
+end

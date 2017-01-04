@@ -11,12 +11,21 @@ set :tmp_dir, "#{fetch(:deploy_to)}/tmp"
 set :local_user, -> { Etc.getlogin }
 set :rails_env, -> { fetch(:stage) }
 
+
 set :linked_files, %w{
 }
 set :linked_dirs, %w{
   log
   tmp
 }
+
+# set :ssh_options, proxy: Net::SSH::Proxy::Command.new('ssh mygateway.com -W %h:%p')
+
+# set :ssh_options, {
+#    forward_agent: true
+# }
+
+# set :ssh_options[:forward_agent], true
 
   # vendor/bundle
   # public/system
